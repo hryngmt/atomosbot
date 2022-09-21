@@ -15,7 +15,7 @@ import plotly.graph_objects as go
 sys.path.append(Path(__file__).resolve().parents[1].as_posix())
 
 from utils import get_api_data, get_lon_lat_from_address, upload_image_to_gyazo
-
+charset=UTF-8
 # ローカルでのみ使用する環境変数の設定
 try:
     from dotenv import load_dotenv
