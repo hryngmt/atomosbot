@@ -15,7 +15,7 @@ import plotly.graph_objects as go
 sys.path.append(Path(__file__).resolve().parents[1].as_posix())
 
 from utils import get_api_data, get_lon_lat_from_address, upload_image_to_gyazo
-charset=UTF-8
+
 # ローカルでのみ使用する環境変数の設定
 try:
     from dotenv import load_dotenv
@@ -47,6 +47,12 @@ class ForecastAtomosPhenom:
         # 取得対象を指定
         self.address = address
         self.duration = duration
+        
+d = {'one':1, 'two':2, 'three':3}
+try:
+  d['four']
+except KeyError:
+  print('No such key')
 
         # 天気予報を取得し、タイムスタンプで取得された日時をdatetime型に変換
         self.res = self.convert_timestamp_into_datetime(res=self.get_forecast())
